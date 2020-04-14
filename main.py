@@ -15,8 +15,9 @@ def root():
 @app.route("/endpoint1", methods=['GET','POST'])
 def endpoint1():   
     if request.args.get('name') is not None:  
-        return 'hello' + request.args.get('name')
-        print('NAME:'+ request.args.get('name'))
+        print('NAME: '+ request.args.get('name'))
+        return 'hello ' + request.args.get('name')
+        
     else:
         return 'hello unknown'
 
@@ -31,3 +32,9 @@ def endpoint2(var=None):
         
 if __name__ == "__main__":
     app.run(host='127.0.0.1',debug=True)
+
+    
+    
+    
+    
+    
